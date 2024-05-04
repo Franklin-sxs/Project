@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+Skin Disease Classification System - Result
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 upload-form">
+        <h2 class="text-center">Analysis Result</h2>
+        <img src="{{ url_for('static', filename=image_path) }}" alt="Uploaded Image" class="img-fluid">
+        <p>Predicted Skin Disease Class: <strong>{{ results.predicted_class }}</strong></p>
+
+        <h3>Probability Distribution:</h3>
+        <ul>
+        {% for label, probability in results.probabilities.items() %}
+            <li>{{ label }}: {{ probability | round(2) }}%</li>
+        {% endfor %}
+        </ul>
+        <a href="/" class="btn btn-primary">Analysis Another Image</a>
+
+    </div>
+</div>
+{% endblock %}
+
+
+

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+Skin Disease Classification System - About
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 upload-form">
+        <h2 class="text-center">About Skin Disease Classification System</h2>
+        <p>
+            The Skin Disease Classification System is designed to assist dermatologists
+            in diagnosing skin diseases by using artificial intelligence to analyze images of skin conditions.
+            This system uses deep learning algorithms to provide an initial assessment of skin images,
+            which can help streamline the diagnostic process and provide quick feedback to patients.
+        </p>
+        <p>
+            Our system is built on state-of-the-art convolutional neural networks that have been trained
+            on thousands of images from the HAM10000 dataset. These models are capable of recognizing
+            multiple types of skin diseases with high accuracy, providing a valuable second opinion to healthcare professionals.
+        </p>
+        <p>
+            <strong>Disclaimer:</strong> This tool is intended to be used as a supplementary aid in diagnosis
+            and is not intended to replace professional medical advice. Always consult a qualified healthcare provider
+            with any questions regarding a medical condition.
+        </p>
+    </div>
+</div>
+{% endblock %}
